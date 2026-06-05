@@ -1,54 +1,43 @@
-@media (min-width: 37.5625rem) {
-    .container--desktop {
-        & > div {
-            max-width: 13rem;
-        }
+@media (min-width: 768px) {
 
-        & > .btn {
-            position: fixed;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            width: auto;
-        }
+    .container > .btn {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 10;
     }
 
-    .class-header--desktop {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0;
-
-        & .input-icon-wrapper {
-            width: fit-content;
-        }
-    }
-
-    main.main--desktop {
+    main {
         padding: 3rem 2rem;
+        max-width: 64rem;
     }
 
-    .daily-schedule--desktop {
-        gap: 1.5rem;
+    .class-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
     }
 
-    .schedule-item--desktop {
-        display: grid;
+    .class-header__text {
+        flex: 1;
+    }
+
+    .daily-schedule [class$="-schedule"] {
         grid-template-columns: 3.5rem 1fr 1fr auto;
         align-items: center;
-        gap: 1rem;
-
-        & button {
-            white-space: nowrap;
-        }
     }
 
-    .modal-overlay--desktop {
-        margin: 1.375rem 27.75rem;
+    .modal-root {
         padding: 2.5rem;
-        max-width: none;
     }
 
-    .modal--desktop .input-date-hour {
+    .modal-overlay {
+        max-width: 32rem;
+        padding: 2.5rem;
+        margin: 1.375rem auto;
+    }
+
+    .modal .input-date-hour {
         grid-template-columns: 1fr 1fr;
     }
 }

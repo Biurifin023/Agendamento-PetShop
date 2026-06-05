@@ -1,93 +1,190 @@
 main {
+
     display: flex;
+
     flex-direction: column;
+
     width: 100%;
-    max-width: 64rem;
+
     margin-inline: auto;
 
+
+
     & .daily-schedule {
+
         display: grid;
+
         grid-template-columns: 1fr;
+
         gap: 1.5rem;
+
         width: 100%;
 
+
+
         & .schedules {
+
             background-color: var(--bg-secondary);
+
             border-radius: 0.75rem;
+
             padding: 1rem;
 
+
+
             & > header {
+
                 display: flex;
+
                 align-items: center;
+
                 gap: 0.75rem;
+
                 padding-bottom: 0.75rem;
+
                 border-bottom: 1px solid var(--border-divisor);
+
+
 
                 & img {
+
                     width: 2rem;
+
                     height: 2rem;
+
                     padding: 0.375rem;
+
                     border-radius: 0.5rem;
+
                     flex-shrink: 0;
+
                 }
+
+
 
                 & h2 {
+
                     font: var(--label-md);
+
                 }
+
+
 
                 & span {
+
                     margin-left: auto;
+
                     font: var(--label-sm);
+
                     color: var(--content-secondary);
+
                 }
+
             }
 
-            & .schedule-item {
+
+
+            & [class$="-schedule"] {
+
+                display: grid;
+
+                gap: 1rem;
+
                 padding: 1rem 0;
+
                 border-bottom: 1px solid var(--border-divisor);
 
+
+
                 &:last-child {
+
                     border-bottom: none;
+
                 }
+
+
 
                 & .hour {
+
                     font: var(--label-sm);
+
                 }
+
+
 
                 & .client {
+
                     display: flex;
+
                     align-items: center;
+
                     gap: 0.25rem;
 
+
+
                     & strong {
+
                         font: var(--label-sm);
+
                         color: var(--content-primary);
+
                     }
+
+
 
                     & p {
+
                         font: var(--paragraph-sm);
+
                         color: var(--content-secondary);
+
                     }
+
                 }
+
+
 
                 & .service {
+
                     font: var(--paragraph-sm);
+
                     color: var(--content-secondary);
+
                 }
+
+
 
                 & button {
+
                     padding: 0;
+
                     border: none;
+
                     background: none;
+
                     font: var(--link);
+
                     color: var(--content-secondary);
+
                     cursor: pointer;
 
+                    white-space: nowrap;
+
+
+
                     &:hover {
+
                         color: var(--content-primary);
+
                     }
+
                 }
+
             }
+
         }
+
     }
+
 }
+

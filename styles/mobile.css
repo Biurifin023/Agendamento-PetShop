@@ -1,143 +1,92 @@
-@media (max-width: 37.5rem) {
-    .container--mobile {
-        & > div {
-            max-width: 100%;
-            border-bottom-right-radius: 0;
-        }
+@media (max-width: 767px) {
 
-        & .header-logo h3 {
-            font-size: 1.25rem;
-        }
-
-        & > .btn {
-            position: fixed;
-            bottom: 1rem;
-            left: 1rem;
-            right: 1rem;
-            width: calc(100% - 2rem);
-            z-index: 10;
-        }
+    .container > div {
+        max-width: 100%;
+        border-bottom-right-radius: 0;
     }
 
-    .class-header--mobile {
+    .container > .btn {
+        display: block;
+        width: fit-content;
+        margin: 1.5rem auto;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+    }
+
+    .class-header {
         flex-direction: column;
-        align-items: stretch;
-        gap: 1.25rem;
+        align-items: flex-start;
+        gap: 1.5rem;
         padding-bottom: 1.5rem;
-
-        & .class-header__text {
-            gap: 0.5rem;
-
-            & h1 {
-                font-size: 1.25rem;
-            }
-
-            & p {
-                font-size: 0.875rem;
-                line-height: 1.25rem;
-            }
-        }
-
-        & .input-icon-wrapper {
-            width: 100%;
-            justify-content: space-between;
-
-            & .input-field {
-                flex: 1;
-                min-width: 0;
-            }
-        }
     }
 
-    main.main--mobile {
-        padding: 1.5rem 1rem 5rem;
+    .class-header__text h1 {
+        font-size: 1.25rem;
     }
 
-    .daily-schedule--mobile {
+    .class-header .input-icon-wrapper {
+        width: 100%;
+    }
+
+    .class-header .input-icon-wrapper .input-field {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .daily-schedule {
         gap: 1rem;
     }
 
-    .schedules--mobile {
-        padding: 0.75rem;
+    .daily-schedule .schedules > header span {
+        font-size: 0.875rem;
     }
 
-    .schedule-item--mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    .daily-schedule [class$="-schedule"] {
+        grid-template-columns: 1fr;
         gap: 0.5rem;
-        padding: 0.875rem 0;
-
-        & .hour {
-            font-size: 0.875rem;
-            color: var(--content-brand);
-        }
-
-        & .client {
-            flex-wrap: wrap;
-        }
-
-        & .service {
-            width: 100%;
-        }
-
-        & button {
-            align-self: flex-end;
-            padding: 0.25rem 0;
-            font-size: 0.875rem;
-        }
+        padding: 1rem 0;
     }
 
-    .schedules--mobile > header {
-        & h2 {
-            font-size: 1rem;
-        }
-
-        & span {
-            font-size: 0.75rem;
-        }
-
-        & img {
-            width: 1.75rem;
-            height: 1.75rem;
-        }
+    .daily-schedule [class$="-schedule"] .hour {
+        font-size: 0.875rem;
+        color: var(--content-brand);
     }
 
-    .modal-root--mobile {
+    .daily-schedule [class$="-schedule"] .client {
+        flex-wrap: wrap;
+    }
+
+    .daily-schedule [class$="-schedule"] .service {
+        padding-left: 0;
+    }
+
+    .daily-schedule [class$="-schedule"] button {
+        justify-self: start;
+        margin-top: 0.25rem;
+    }
+
+    .modal-root {
         align-items: flex-end;
+        padding: 0;
     }
 
-    .modal-overlay--mobile {
-        width: 100%;
+    .modal-overlay {
         max-width: 100%;
+        max-height: 100%;
+        padding: 1.5rem 1rem;
         margin: 0;
-        padding: 1.25rem 1rem 1.5rem;
         border-radius: 1.25rem 1.25rem 0 0;
-        max-height: 92vh;
         overflow-y: auto;
-        align-items: stretch;
     }
 
-    .modal--mobile {
-        width: 100%;
+    .modal header h1 {
+        font-size: 1.25rem;
+    }
 
-        & header h1 {
-            font-size: 1.25rem;
-        }
-
-        & header p {
-            font-size: 0.875rem;
-            margin-bottom: 1.25rem;
-        }
-
-        & .input-date-hour {
-            grid-template-columns: 1fr;
-            gap: 0.75rem;
-        }
-
-        & .btn {
-            width: 100%;
-            margin-top: 0.5rem;
-        }
+    .modal .input-date-hour {
+        grid-template-columns: 1fr;
     }
 }

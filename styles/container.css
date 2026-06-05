@@ -5,6 +5,7 @@
 
     & > div {
         width: 100%;
+        max-width: 13rem;
         display: flex;
         align-items: center;
         background-color: var(--bg-secondary);
@@ -21,8 +22,5 @@
             height: 1.5rem;
         }
     }
- 
-    & > .btn {
-        z-index: 10;
-    }
+
 }

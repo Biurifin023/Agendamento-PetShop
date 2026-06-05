@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: var(--font-secondary);
-    background-color: var(--bg-primary);
-}
-
 :root {
  
  /* Cores*/
@@ -48,6 +43,11 @@ body {
 --link: 400 1rem/.75 var(--font-secondary);
 }
 
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--bg-primary);
+}
+
 p{
     color: var(--content-secondary);
 }
@@ -77,8 +77,6 @@ h3 {
     width: 100%;
     height: 2.75rem;
     padding: 1rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid var(--border-primary);
     background-color: var(--bg-secondary);
