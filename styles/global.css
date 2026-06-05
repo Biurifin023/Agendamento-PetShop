@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--bg-primary);
+}
+
+:root {
+ 
+ /* Cores*/
+--content-primary: #ffffff;
+--content-secondary: #98959d;
+--content-tertiary: #666666;
+--content-brand: #9282fa;
+
+--bg-primary: #151515;
+--bg-secondary: #1e1e1e;
+--bg-tertiary: #23242c;
+--bg-brand: #9282fa;
+--bg-highlights: #bdb4fa;
+
+--border-primary: #3e3c41;
+--border-secondary: #86818c;
+--border-brand: #9282fa;
+--border-divisor: #353339;
+
+--blue: #027df0;
+--blue-light: #16487a;
+--yellow: #f0dc02;
+--yellow-light: #756e1b;
+--orange: #f09102;
+--brown: #75501b;
+
+/* Fonts */
+--font-primary: 'Inter Tight', 'sans-serif';
+--font-secondary: 'Inter', 'sans-serif';
+
+--title: 700 1.5rem/1 var(--font-primary);
+--paragraph-md: 400 1.5rem/.875 var(--font-secondary);
+--paragraph-sm: 400 1rem/.75 var(--font-secondary);
+--label-lg: 700 1.5rem/1 var(--font-secondary);
+--label-md: 700 1.5rem/.75 var(--font-secondary);
+--label-sm: 700 1rem/.75 var(--font-secondary);
+--link: 400 1rem/.75 var(--font-secondary);
+}
+
+p{
+    color: var(--content-secondary);
+}
+
+h1,h2,span,label {
+    color: var(--content-primary);
+}
+
+h3 {
+    font: var(--title);
+    color: var(--content-brand);
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: var(--bg-brand);
+    padding: 0.85rem;
+    border-radius: 0.425rem;
+    border: none;
+    cursor: pointer;
+    font: 700 1.275rem/1 var(--font-secondary);
+    text-transform: uppercase;
+}
+
+.input-field {
+    width: 100%;
+    height: 2.75rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-primary);
+    background-color: var(--bg-secondary);
+    color: var(--content-primary);
+    font: var(--paragraph-sm);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: var(--content-secondary);
+}
+
+.input-field:focus {
+    border-color: var(--border-brand);
+}
+
+textarea.input-field {
+    min-height: 5.5rem;
+    height: auto;
+    padding-block: 0.75rem;
+    resize: vertical;
+}
+
