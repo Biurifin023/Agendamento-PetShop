@@ -65,18 +65,20 @@ h3 {
 
 .btn {
     background-color: var(--bg-brand);
-    padding: 0.85rem;
-    border-radius: 0.425rem;
+    padding: 0.725rem;
+    border-radius: 0.36rem;
     border: none;
     cursor: pointer;
-    font: 700 1.275rem/1 var(--font-secondary);
+    font: 700 1.084rem/1 var(--font-secondary);
     text-transform: uppercase;
 }
 
 .input-field {
     width: 100%;
     height: 2.75rem;
-    padding: 0 1rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid var(--border-primary);
     background-color: var(--bg-secondary);
@@ -91,7 +93,9 @@ h3 {
     color: var(--content-secondary);
 }
 
-.input-field:focus {
+.input-field:focus,
+.input-field:focus-visible,
+.input-field:active {
     border-color: var(--border-brand);
 }
 

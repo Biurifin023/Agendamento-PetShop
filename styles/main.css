@@ -38,7 +38,7 @@ main {
 
                 & span {
                     margin-left: auto;
-                    font: var(--paragraph-sm);
+                    font: var(--label-sm);
                     color: var(--content-secondary);
                 }
             }

@@ -96,7 +96,7 @@
                         <span class="hour">19:00</span>
                         <div class="client">
                             <strong>Max </strong>
-                            <p> / Camila Santos</p>
+                            <p>/ Camila Santos</p>
                         </div>
                         <p class="service">Limpeza de dentes</p>
                         <button>Remover agendamento</button>
@@ -108,7 +108,9 @@
         <button class="btn" id="open-modal">Novo Agendamento</button>
     </div>
 
-    <div class="modal-overlay hidden" id="modal-overlay" aria-hidden="true">
+    <div class="modal-root hidden" id="modal-overlay" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-overlay">
         <div class="modal">
             <header>
                 <h1>Agende um atendimento</h1>
@@ -118,17 +120,26 @@
             <form id="appointment-form">
                 <div class="input-wrapper">
                     <label for="tutor-name">Nome do tutor(a)</label>
-                    <input type="text" id="tutor-name" class="input-field" placeholder="Digite o nome do Tutor(a)">
+                    <div class="input-icon-wrapper">
+                        <img class="input-icon input-icon--left" src="./assets/user.svg" alt="" aria-hidden="true">
+                        <input type="text" id="tutor-name" class="input-field" placeholder="Digite o nome do Tutor(a)">
+                    </div>
                 </div>
 
                 <div class="input-wrapper">
                     <label for="pet-name">Nome do pet</label>
-                    <input type="text" id="pet-name" class="input-field" placeholder="Digite o nome do Pet">
+                    <div class="input-icon-wrapper">
+                        <img class="input-icon input-icon--left" src="./assets/pet-paw.svg" alt="" aria-hidden="true">
+                        <input type="text" id="pet-name" class="input-field" placeholder="Digite o nome do Pet">
+                    </div>
                 </div>
 
                 <div class="input-wrapper">
                     <label for="phone">Telefone</label>
-                    <input type="tel" id="phone" class="input-field" placeholder="(00) 00000-0000">
+                    <div class="input-icon-wrapper">
+                        <img class="input-icon input-icon--left" src="./assets/phone.svg" alt="" aria-hidden="true">
+                        <input type="tel" id="phone" class="input-field" placeholder="(00) 00000-0000">
+                    </div>
                 </div>
 
                 <div class="input-wrapper">
@@ -137,14 +148,27 @@
                 </div>
 
                 <div class="input-date-hour">
-                    <label for="appointment-date">Data</label>
-                    <input type="date" id="appointment-date" class="input-field">
-                    <label for="appointment-hour">Hora</label>
-                    <input type="time" id="appointment-hour" class="input-field">
+                    <div class="input-wrapper">
+                        <label for="appointment-date">Data</label>
+                        <div class="input-icon-wrapper">
+                            <img class="input-icon input-icon--left" src="./assets/calendar.svg" alt="" aria-hidden="true">
+                            <input type="date" id="appointment-date" class="input-field">
+                            <img class="input-icon input-icon--right" src="./assets/arrow-down.svg" alt="" aria-hidden="true">
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="appointment-hour">Hora</label>
+                        <div class="input-icon-wrapper">
+                            <img class="input-icon input-icon--left" src="./assets/clock.svg" alt="" aria-hidden="true">
+                            <input type="time" id="appointment-hour" class="input-field">
+                            <img class="input-icon input-icon--right" src="./assets/arrow-down.svg" alt="" aria-hidden="true">
+                        </div>
+                    </div>
                 </div>
 
                 <button class="btn" type="submit">Agendar</button>
             </form>
+        </div>
         </div>
     </div>
 </body>

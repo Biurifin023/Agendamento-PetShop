@@ -38,6 +38,10 @@
             pointer-events: none;
         }
 
+        &:focus-within {
+            border-color: var(--border-brand);
+        }
+
         & .input-field {
             position: relative;
             width: auto;
