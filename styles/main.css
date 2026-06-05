@@ -3,7 +3,6 @@ main {
     flex-direction: column;
     width: 100%;
     max-width: 64rem;
-    padding: 3rem 2rem;
     margin-inline: auto;
 
     & .daily-schedule {
@@ -43,11 +42,7 @@ main {
                 }
             }
 
-            & [class$="-schedule"] {
-                display: grid;
-                grid-template-columns: 3.5rem 1fr 1fr auto;
-                align-items: center;
-                gap: 1rem;
+            & .schedule-item {
                 padding: 1rem 0;
                 border-bottom: 1px solid var(--border-divisor);
 
@@ -87,7 +82,6 @@ main {
                     font: var(--link);
                     color: var(--content-secondary);
                     cursor: pointer;
-                    white-space: nowrap;
 
                     &:hover {
                         color: var(--content-primary);

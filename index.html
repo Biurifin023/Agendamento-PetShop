@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container container--desktop container--mobile">
         <div>
             <div class="header-logo">
                 <img src="./assets/dog-logo.svg" alt="Logo">
@@ -18,8 +18,8 @@
             </div>
         </div>
                
-        <main>
-            <div class="class-header">
+        <main class="main--desktop main--mobile">
+            <div class="class-header class-header--desktop class-header--mobile">
                 <div class="class-header__text">
                     <h1>Sua agenda</h1>
                     <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
@@ -32,15 +32,15 @@
                 </div>
             </div>
 
-            <div class="daily-schedule">
+            <div class="daily-schedule daily-schedule--desktop daily-schedule--mobile">
 
-                <div class="schedules">
+                <div class="schedules schedules--mobile">
                     <header class="morning-header">
                         <img src="assets/sun.svg" alt="Sol">
                         <h2>Manhã</h2>
                         <span>09h-12h</span>
                     </header>
-                    <div class="morning-schedule">
+                    <div class="morning-schedule schedule-item schedule-item--desktop schedule-item--mobile">
                         <span class="hour">09:00</span>
                         <div class="client">
                             <strong>Thor</strong>
@@ -51,13 +51,13 @@
                     </div>
                 </div>
             
-                <div class="schedules">
+                <div class="schedules schedules--mobile">
                     <header class="afternoon-header">
                         <img src="assets/cloud.svg" alt="NUvem">
                         <h2>Tarde</h2>
                         <span>13h-18h</span>
                     </header>
-                    <div class="afternoon-schedule">
+                    <div class="afternoon-schedule schedule-item schedule-item--desktop schedule-item--mobile">
                         <span class="hour">13:00</span>
                         <div class="client">
                             <strong>Mel</strong>
@@ -66,7 +66,7 @@
                         <p class="service">Corte de unhas</p>
                         <button>Remover agendamento</button>
                     </div>
-                    <div class="afternoon-schedule">
+                    <div class="afternoon-schedule schedule-item schedule-item--desktop schedule-item--mobile">
                         <span class="hour">14:00</span>
                         <div class="client">
                             <strong>Bella</strong>
@@ -75,7 +75,7 @@
                         <p class="service">Aplicação anti-pulgas</p>
                         <button>Remover agendamento</button>
                     </div>
-                    <div class="afternoon-schedule">
+                    <div class="afternoon-schedule schedule-item schedule-item--desktop schedule-item--mobile">
                         <span class="hour">15:00</span>
                         <div class="client">
                             <strong>Simba</strong>
@@ -86,13 +86,13 @@
                     </div>
                 </div>
 
-                <div class="schedules">
+                <div class="schedules schedules--mobile">
                     <header class="evening-header">
                         <img src="assets/moon.svg" alt="Lua">
                         <h2>Noite</h2>
                         <span>19h-21h</span>
                     </header>
-                    <div class="evening-schedule">
+                    <div class="evening-schedule schedule-item schedule-item--desktop schedule-item--mobile">
                         <span class="hour">19:00</span>
                         <div class="client">
                             <strong>Max </strong>
@@ -108,10 +108,10 @@
         <button class="btn" id="open-modal">Novo Agendamento</button>
     </div>
 
-    <div class="modal-root hidden" id="modal-overlay" aria-hidden="true">
+    <div class="modal-root modal-root--mobile hidden" id="modal-overlay" aria-hidden="true">
         <div class="modal-backdrop"></div>
-        <div class="modal-overlay">
-        <div class="modal">
+        <div class="modal-overlay modal-overlay--desktop modal-overlay--mobile">
+        <div class="modal modal--desktop modal--mobile">
             <header>
                 <h1>Agende um atendimento</h1>
                 <p>Preencha os dados do cliente para realizar o agendamento:</p>

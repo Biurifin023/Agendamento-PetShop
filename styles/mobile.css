@@ -1,0 +1,143 @@
+@media (max-width: 37.5rem) {
+    .container--mobile {
+        & > div {
+            max-width: 100%;
+            border-bottom-right-radius: 0;
+        }
+
+        & .header-logo h3 {
+            font-size: 1.25rem;
+        }
+
+        & > .btn {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            width: calc(100% - 2rem);
+            z-index: 10;
+        }
+    }
+
+    .class-header--mobile {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+        padding-bottom: 1.5rem;
+
+        & .class-header__text {
+            gap: 0.5rem;
+
+            & h1 {
+                font-size: 1.25rem;
+            }
+
+            & p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+        }
+
+        & .input-icon-wrapper {
+            width: 100%;
+            justify-content: space-between;
+
+            & .input-field {
+                flex: 1;
+                min-width: 0;
+            }
+        }
+    }
+
+    main.main--mobile {
+        padding: 1.5rem 1rem 5rem;
+    }
+
+    .daily-schedule--mobile {
+        gap: 1rem;
+    }
+
+    .schedules--mobile {
+        padding: 0.75rem;
+    }
+
+    .schedule-item--mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.875rem 0;
+
+        & .hour {
+            font-size: 0.875rem;
+            color: var(--content-brand);
+        }
+
+        & .client {
+            flex-wrap: wrap;
+        }
+
+        & .service {
+            width: 100%;
+        }
+
+        & button {
+            align-self: flex-end;
+            padding: 0.25rem 0;
+            font-size: 0.875rem;
+        }
+    }
+
+    .schedules--mobile > header {
+        & h2 {
+            font-size: 1rem;
+        }
+
+        & span {
+            font-size: 0.75rem;
+        }
+
+        & img {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+    }
+
+    .modal-root--mobile {
+        align-items: flex-end;
+    }
+
+    .modal-overlay--mobile {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1.25rem 1rem 1.5rem;
+        border-radius: 1.25rem 1.25rem 0 0;
+        max-height: 92vh;
+        overflow-y: auto;
+        align-items: stretch;
+    }
+
+    .modal--mobile {
+        width: 100%;
+
+        & header h1 {
+            font-size: 1.25rem;
+        }
+
+        & header p {
+            font-size: 0.875rem;
+            margin-bottom: 1.25rem;
+        }
+
+        & .input-date-hour {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+
+        & .btn {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+    }
+}

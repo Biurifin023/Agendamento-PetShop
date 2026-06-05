@@ -1,0 +1,29 @@
+:root {
+    --breakpoint-mobile: 37.5rem; /* 375px */
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 37.5rem) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .mobile-only--flex {
+        display: flex;
+    }
+
+    .mobile-only--grid {
+        display: grid;
+    }
+}
