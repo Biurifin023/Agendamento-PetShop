@@ -5,6 +5,9 @@ const modalBackDrop = document.querySelector('.modal-backdrop')
 const dateInput = document.getElementById('date')
 const appointmentDate = document.getElementById('appointment-date')
 const appointmentHour = document.getElementById('appointment-hour')
+const phoneInput = document.getElementById('phone')
+const formatPhoneInput = document.getElementById('phone')
+
 
 //Abrir o modal ao clicar em novo agendamento.
 openModalBtn.addEventListener('click', function () {
@@ -52,5 +55,22 @@ openPickerOnArrowClick(dateInput, dateArrow)
 openPickerOnArrowClick(appointmentDate, appointmentDateArrow)
 openPickerOnArrowClick(appointmentHour, appointmentHourArrow)
 
+// Impedindo que caracteres não numéricos sejam inseridos no campo de telefone e formatando o telefone ao digitar.
+phoneInput.addEventListener('input', function (){
+    this.value = this.value.replace(/\D/g, '')
+})
+
+function formatPhone(value) {
+    let numbers = value.replace(/\D/g, '').slice(0, 11)
+
+    if (numbers.length === 0) return ''
+    if (numbers.length <= 2) return `(${numbers}`
+    if (numbers.length <= 7) return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`
+    return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7)}`
+}
+
+phoneInput.addEventListener('input', function () {
+    this.value = formatPhone(this.value)
+})
 
 
