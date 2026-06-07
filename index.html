@@ -1,226 +1,71 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Agendamento de PetShop</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./index.css">
-
 </head>
-
 <body>
-
     <div class="container">
-
         <div>
-
             <div class="header-logo">
-
                 <img src="./assets/dog-logo.svg" alt="Logo">
-
                 <h3>Mundo Pet</h3>
-
             </div>
-
         </div>
-
-               
-
         <main>
-
             <div class="class-header">
-
                 <div class="class-header__text">
-
                     <h1>Sua agenda</h1>
-
                     <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
-
                 </div>
-
-
-
                 <div class="input-icon-wrapper">
-
                     <img class="input-icon input-icon--left" src="./assets/calendar.svg" alt="" aria-hidden="true">
-
                     <input type="date" id="date" class="input-field">
-
                     <img class="input-icon input-icon--right" src="./assets/arrow-down.svg" alt="" aria-hidden="true">
-
                 </div>
-
             </div>
-
-
-
             <div class="daily-schedule">
-
-
-
                 <div class="schedules">
-
                     <header class="morning-header">
-
-                        <img src="assets/sun.svg" alt="Sol">
-
+                        <img src="./assets/sun.svg" alt="Sol">
                         <h2>Manhã</h2>
-
                         <span>09h-12h</span>
-
                     </header>
-
-                    <div class="morning-schedule">
-
-                        <span class="hour">09:00</span>
-
-                        <div class="client">
-
-                            <strong>Thor</strong>
-
-                            <p>/ Fernanda Costa</p>
-
-                        </div>
-
-                        <p class="service">Vacinação</p>
-
-                        <button>Remover agendamento</button>
-
-                    </div>
-
+                    <p class="schedule-empty">Nenhum agendamento neste período.</p>
                 </div>
-
-            
-
                 <div class="schedules">
-
                     <header class="afternoon-header">
-
-                        <img src="assets/cloud.svg" alt="NUvem">
-
+                        <img src="./assets/cloud.svg" alt="Nuvem">
                         <h2>Tarde</h2>
-
                         <span>13h-18h</span>
-
                     </header>
-
-                    <div class="afternoon-schedule">
-
-                        <span class="hour">13:00</span>
-
-                        <div class="client">
-
-                            <strong>Mel</strong>
-
-                            <p>/ João Souza</p>
-
-                        </div>
-
-                        <p class="service">Corte de unhas</p>
-
-                        <button>Remover agendamento</button>
-
-                    </div>
-
-                    <div class="afternoon-schedule">
-
-                        <span class="hour">14:00</span>
-
-                        <div class="client">
-
-                            <strong>Bella</strong>
-
-                            <p>/ Pedro Oliveira</p>
-
-                        </div>
-
-                        <p class="service">Aplicação anti-pulgas</p>
-
-                        <button>Remover agendamento</button>
-
-                    </div>
-
-                    <div class="afternoon-schedule">
-
-                        <span class="hour">15:00</span>
-
-                        <div class="client">
-
-                            <strong>Simba</strong>
-
-                            <p>/ Julia Rocha</p>
-
-                        </div>
-
-                        <p class="service">Banho e tosa</p>
-
-                        <button>Remover agendamento</button>
-
-                    </div>
-
+                    <p class="schedule-empty">Nenhum agendamento neste período.</p>
                 </div>
-
-
-
                 <div class="schedules">
-
                     <header class="evening-header">
-
-                        <img src="assets/moon.svg" alt="Lua">
-
+                        <img src="./assets/moon.svg" alt="Lua">
                         <h2>Noite</h2>
-
                         <span>19h-21h</span>
-
                     </header>
-
-                    <div class="evening-schedule">
-
-                        <span class="hour">19:00</span>
-
-                        <div class="client">
-
-                            <strong>Max </strong>
-
-                            <p>/ Camila Santos</p>
-
-                        </div>
-
-                        <p class="service">Limpeza de dentes</p>
-
-                        <button>Remover agendamento</button>
-
-                    </div>
-
+                    <p class="schedule-empty">Nenhum agendamento neste período.</p>
                 </div>
-
             </div>
-
         </main>
-
-
-
         <button class="btn" id="open-modal">Novo Agendamento</button>
-
     </div>
-
-     <div class="modal-root hidden" id="modal-overlay" aria-hidden="true">
+    <div class="modal-root hidden" id="modal-overlay" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-overlay">
             <div class="modal">
                 <header>
+                    <button type="button" id="close-modal" class="modal-close" aria-label="Fechar">
+                        <img src="./assets/close.svg" alt="" aria-hidden="true">
+                    </button>
                     <h1>Agende um atendimento</h1>
                     <p>Preencha os dados do cliente para realizar o agendamento:</p>
                 </header>
@@ -229,33 +74,33 @@
                         <label for="tutor-name">Nome do tutor(a)</label>
                         <div class="input-icon-wrapper">
                             <img class="input-icon input-icon--left" src="./assets/user.svg" alt="" aria-hidden="true">
-                            <input type="text" id="tutor-name" class="input-field" placeholder="Digite o nome do Tutor(a)">
+                            <input type="text" id="tutor-name" class="input-field" placeholder="Digite o nome do Tutor(a)" required>
                         </div>
                     </div>
                     <div class="input-wrapper">
                         <label for="pet-name">Nome do pet</label>
                         <div class="input-icon-wrapper">
                             <img class="input-icon input-icon--left" src="./assets/pet-paw.svg" alt="" aria-hidden="true">
-                            <input type="text" id="pet-name" class="input-field" placeholder="Digite o nome do Pet">
+                            <input type="text" id="pet-name" class="input-field" placeholder="Digite o nome do Pet" required>
                         </div>
                     </div>
                     <div class="input-wrapper">
                         <label for="phone">Telefone</label>
                         <div class="input-icon-wrapper">
                             <img class="input-icon input-icon--left" src="./assets/phone.svg" alt="" aria-hidden="true">
-                            <input type="tel" id="phone" class="input-field" inputmode="numeric" placeholder="(00) 00000-0000">
+                            <input type="tel" id="phone" class="input-field" inputmode="numeric" placeholder="(00) 00000-0000" required>
                         </div>
                     </div>
                     <div class="input-wrapper">
                         <label for="description">Descrição do serviço</label>
-                        <textarea id="description" class="input-field" placeholder="Banho e tosa"></textarea>
+                        <textarea id="description" class="input-field" placeholder="Banho e tosa" required></textarea>
                     </div>
                     <div class="input-date-hour">
                         <div class="input-wrapper">
                             <label for="appointment-date">Data</label>
                             <div class="input-icon-wrapper">
                                 <img class="input-icon input-icon--left" src="./assets/calendar.svg" alt="" aria-hidden="true">
-                                <input type="date" id="appointment-date" class="input-field">
+                                <input type="date" id="appointment-date" class="input-field" required>
                                 <img class="input-icon input-icon--right" src="./assets/arrow-down.svg" alt="" aria-hidden="true">
                             </div>
                         </div>
@@ -263,7 +108,7 @@
                             <label for="appointment-hour">Hora</label>
                             <div class="input-icon-wrapper">
                                 <img class="input-icon input-icon--left" src="./assets/clock.svg" alt="" aria-hidden="true">
-                                <input type="time" id="appointment-hour" class="input-field" value="00:00">
+                                <input type="time" id="appointment-hour" class="input-field" value="00:00" required>
                                 <img class="input-icon input-icon--right" src="./assets/arrow-down.svg" alt="" aria-hidden="true">
                             </div>
                         </div>
@@ -273,9 +118,6 @@
             </div>
         </div>
     </div>
-  
     <script src="./index.js"></script>
 </body>
-
 </html>
-

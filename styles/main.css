@@ -84,6 +84,16 @@ main {
 
 
 
+            & .schedule-empty {
+                font: var(--paragraph-sm);
+                color: var(--content-secondary);
+                padding-top: 1rem;
+            }
+
+            &:has([class$="-schedule"]) .schedule-empty {
+                display: none;
+            }
+
             & [class$="-schedule"] {
 
                 display: grid;
