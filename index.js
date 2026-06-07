@@ -55,10 +55,29 @@ const appointmentHourArrow = appointmentHour
     .closest('.input-icon-wrapper')
     .querySelector('.input-icon--right')
 
+function openPicker(input) {
+    input.focus({ preventScroll: true })
+
+    if (typeof input.showPicker === 'function') {
+        try {
+            input.showPicker()
+            return
+        } catch (error) {
+            // Safari iOS pode não suportar showPicker
+        }
+    }
+
+    input.click()
+}
+
 function openPickerOnArrowClick(input, arrow) {
-    arrow.addEventListener('click', function () {
-        input.showPicker()
-    })
+    function handleOpen(event) {
+        event.preventDefault()
+        event.stopPropagation()
+        openPicker(input)
+    }
+
+    arrow.addEventListener('pointerup', handleOpen)
 }
 
 openPickerOnArrowClick(dateInput, dateArrow)

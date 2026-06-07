@@ -65,12 +65,15 @@ h3 {
 
 .btn {
     background-color: var(--bg-brand);
+    color: var(--content-primary);
     padding: 0.725rem;
     border-radius: 0.36rem;
     border: none;
     cursor: pointer;
     font: 700 1.084rem/1 var(--font-secondary);
     text-transform: uppercase;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .input-field {

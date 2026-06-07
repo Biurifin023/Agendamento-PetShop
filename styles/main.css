@@ -178,6 +178,10 @@ main {
 
                     cursor: pointer;
 
+                    -webkit-appearance: none;
+
+                    appearance: none;
+
                     white-space: nowrap;
 
 

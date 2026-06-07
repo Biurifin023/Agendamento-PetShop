@@ -107,6 +107,12 @@
             cursor: pointer;
         }
 
+        & .input-icon--right {
+            position: relative;
+            z-index: 2;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         &:focus-within {
             border-color: var(--border-brand);
         }
