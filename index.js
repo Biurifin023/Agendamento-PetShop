@@ -1,3 +1,5 @@
+import { loadAppointments, saveAppointments } from './storage.js'
+
 const openModalBtn = document.getElementById('open-modal')
 const modalOverlay = document.getElementById('modal-overlay')
 const modalBackDrop = document.querySelector('.modal-backdrop')
@@ -9,7 +11,7 @@ const appointmentForm = document.getElementById('appointment-form')
 const dailySchedule = document.querySelector('.daily-schedule')
 const closeModalBtn = document.getElementById('close-modal')
 
-let appointments = []
+let appointments = loadAppointments()
 
 function closeModal() {
     modalOverlay.classList.add('hidden')
@@ -210,6 +212,7 @@ dailySchedule.addEventListener('click', function (event) {
         return !(appointment.date === cardDate && normalizeHour(appointment.hour) === cardHour)
     })
 
+    saveAppointments(appointments)
     renderSchedule(dateInput.value)
 })
 
@@ -251,6 +254,7 @@ appointmentForm.addEventListener('submit', function (event) {
         phone
     })
 
+    saveAppointments(appointments)
     renderSchedule(dateInput.value)
 
     appointmentForm.reset()
